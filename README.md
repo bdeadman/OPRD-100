@@ -1,4 +1,4 @@
-# OPRD-100: Ground-Truth Reaction Dataset and Validation Metrics
+# OPRD-100: Ground-Truth Reaction Dataset and Validation Similarity Metrics
 
 OPRD-100 is a ground-truth dataset of reaction data curated from 100 papers in Organic Process Research & Development (OPRD). This repository also provides code and example notebooks to compute and visualize similarity metrics for validating automated data extraction on the same literature.
 
@@ -15,7 +15,7 @@ OPRD-100 is a ground-truth dataset of reaction data curated from 100 papers in O
   - OPRD-100-validation/ — validation subset for re-extraction (30 locations)
 - src/ — metric implementations and utilities
 - notebooks/ — examples and visualizations of metrics and matching
-- tests/ — unit tests for metrics and matching
+- results — stores visualisation of reaction similarity metrics (initialised with human-extraced results as an example)
 - README.md — this file
 
 Note: Some folders may be created when you first run notebooks or scripts.
@@ -34,53 +34,44 @@ Both original (OPRD-100) and validation JSON data were compared with the followi
 Unless stated otherwise, scores are binary (1/0) or Jaccard-style similarities computed on the exact reported text strings.
 
 1) Reaction entry count
-- Equality of the number of reactions per location (for diagnostics; not in total_similarity).
+  - Equality of the number of reactions per location (for diagnostics; not in total_similarity).
 
 2) SMILES similarity
-- String-based comparison of reported SMILES (exact match or set overlap where applicable).
+  - String-based comparison of reported SMILES (exact match or set overlap where applicable).
 
 3) Reaction step number equality
-- Binary equality of step counts.
+  - Binary equality of step counts.
 
 4) Yield data similarity
-- Comparison of reported yields and their associations with products.
+  - Comparison of reported yields and their associations with products.
 
 5) Reagent similarity
-- Product of two sub-scores:
-  - Name match score
-  - Amount-of-substance score
+  - Product of two sub-scores:
+    - Name match score
+    - Amount-of-substance score
 
 6) Solvent similarity
-- Product of two sub-scores:
-  - Name match score
-  - Amount-of-substance score
+  - Product of two sub-scores:
+    - Name match score
+    - Amount-of-substance score
 
 7) Reaction time similarity
-- 1 minus the normalized difference between reported times.
+  - 1 minus the normalized difference between reported times.
 
 8) Temperature similarity
-- Binary comparison of reported min/max temperatures.
+  - Binary comparison of reported min/max temperatures.
 
 total_similarity = average of metrics 2–8 for a candidate reaction pair.
 
-Pairing strategy
+## Pairing strategy
 - Optimal pairing via Hungarian algorithm using total_similarity as the cost/score.
 - When counts differ, lowest-scoring unmatched reactions are excluded (affected 6 reactions in total during human validation).
 
-## Getting started
-Prerequisites
-- Python 3.10+
-- Recommended: a virtual environment
 
-## Add section on getting scoring metrics
+## Compute Scoring metrics for your dataset!
 
-Open notebooks
-- code: jupyter notebook
-- See notebooks/ for examples that:
-  - Load OPRD-100 and validation JSON
-  - Compute metrics (2–8)
-  - Perform Hungarian matching and compute total_similarity
-  - Produce diagnostic plots
+  - Use the ``example_scoring.ipynb`` notebook in the notebooks folder, change the filepath to your own and simply run all cells.
+
 
 ## Reproducibility tips
 - Keep raw, ground-truth, and validation JSONs immutable; write derived artifacts to a results/ folder.
