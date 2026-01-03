@@ -1,0 +1,11 @@
+{
+  "submitter_name": "test_workflow_submission",
+  "method_description": "Testing automated workflow submission",
+  "repository_url": "https://github.com/your/repo",
+  "paper_url": "",
+  "contact_email": "",
+  "num_reactions": 5,
+  "num_experimental": 0,
+  "num_scheme": 5,
+  "num_table": 0
+}
