@@ -103,9 +103,13 @@ Follow the OPRD-100 schema structure. See the [validation_reactions.json](../OPR
 1. **Fork this repository**
 2. **Extract reactions** from OPRD-100 papers using your method
 3. **Create your submission file** as `data/submissions/your_name.json`
-4. **Create a pull request** with:
-   - Title: `[SUBMISSION] Your Name/Team`
-   - Description: Brief overview of your method
+4. **Create a pull request**
+   - `git checkout -b your_submission_team_name`
+   - `git add data/submissions/your_name.json`
+   - `git commit -m "[SUBMISSION] your_submission_team_name"`
+   - head over to GitHub to complete the pull request with the following: 
+    - Title: `[SUBMISSION] Your Name/Team`
+    - Description: Brief overview of your method
 5. **Automated evaluation** will:
    - Run scoring against the ground-truth dataset
    - Generate plots in `results/your_name_timestamp/`
