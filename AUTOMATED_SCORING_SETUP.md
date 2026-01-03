@@ -31,7 +31,7 @@ OPRD-100/
 ## 🔄 Workflow Process
 
 ### 1. User Submits Data
-User creates a PR with `data/submissions/their_name.json` containing:
+User creates a PR with `data/submissions/your_name.json` containing:
 - Submitter information
 - Method description
 - Extracted reaction data in OPRD-100 format

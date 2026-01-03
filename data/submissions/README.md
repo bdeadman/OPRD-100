@@ -15,58 +15,69 @@ Create a JSON file in this directory with the following structure:
   "contact_email": "your.email@example.com (optional)",
   "reactions": [
     {
-      "DOI": "10.1021/acs.oprd.example",
-      "data_location": "scheme_1",
-      "location": {
-        "Type": "scheme",
-        "Num": "1"
-      },
-      "reactions": [
-        {
-          "step_num": 1,
-          "reaction_smiles": "CC(=O)O.CCO>>CC(=O)OCC",
-          "reagents": [
+        "Reaction": "O=C(O)/C=C/c1ccccc1.Cc1ccc(O)cc1>>Cc1ccc2c(c1)C(c1ccccc1)CC(=O)O2",
+        "Reference": "op050024w",
+        "Location": {
+            "Type": "Scheme",
+            "Num": "1"
+        },
+        "Full text of reaction": null,
+        "Amounts": null,
+        "Steps": [
             {
-              "reagent_name": "acetic acid",
-              "reagent_smiles": "CC(=O)O",
-              "amount_of_substance": {
-                "value": 1.0,
-                "unit": "mol",
-                "reported_value": "1.0 mol"
-              }
+                "Step": 1,
+                "Yield": {
+                    "Isolated": 89.0,
+                    "Flow": null,
+                    "Conversion wrt SM": null,
+                    "Assay Yield": null,
+                    "Selectivity": null,
+                    "er": null,
+                    "er R:S": null,
+                    "er S:R": null,
+                    "ee": null,
+                    "ee (R)": null,
+                    "ee (S)": null,
+                    "Purity": null,
+                    "dr": null,
+                    "E:Z": null,
+                    "Z:E": null,
+                    "Purity type": null,
+                    "Mass": null,
+                    "other": null,
+                    "Quantitative": null,
+                    "No reaction": null
+                },
+                "Reagents": [
+                    {
+                        "Reagent": "H2SO4",
+                        "Amounts": {
+                            "Moisture": null,
+                            "Concentration": null,
+                            "Moles": null,
+                            "Mass": null,
+                            "Volume": null,
+                            "Equivalents": null,
+                            "Pressure": null,
+                            "Flow Rate": null,
+                            "Catalytic Amount": null
+                        }
+                    }
+                ],
+                "Solvents": [
+                    {
+                        "Solvent": null,
+                        "Amounts": {
+                            "Mass": null,
+                            "Volume": null,
+                            "ratio": null
+                        }
+                    }
+                ],
+                "Time": null,
+                "Temperature": "120 - 125 C"
             }
-          ],
-          "solvents": [
-            {
-              "solvent_name": "ethanol",
-              "solvent_smiles": "CCO",
-              "amount_of_substance": {
-                "value": 100,
-                "unit": "mL",
-                "reported_value": "100 mL"
-              }
-            }
-          ],
-          "time": {
-            "value": 24,
-            "unit": "h",
-            "reported_value": "24 h"
-          },
-          "temperature": {
-            "min": 80,
-            "max": 80,
-            "unit": "°C",
-            "reported_value": "80 °C"
-          },
-          "yield_data": [
-            {
-              "product_smiles": "CC(=O)OCC",
-              "yield_percent": 85.0,
-              "reported_value": "85%"
-            }
-          ]
-        }
-      ]
+        ]
     }
   ]
 }
@@ -85,16 +96,7 @@ Create a JSON file in this directory with the following structure:
 - `contact_email`: Your contact email
 
 ### Reaction Data Format
-Follow the OPRD-100 schema structure. See the [validation_reactions.json](../validation_reactions.json) file for complete examples.
-
-Key reaction fields:
-- `DOI`: Paper DOI (must match OPRD-100 papers)
-- `data_location`: Location identifier (e.g., "scheme_1", "table_2", "experimental_1")
-- `location`: Dict with Type and Num
-- `reactions`: Array of reaction objects with:
-  - `step_num`: Reaction step number
-  - `reaction_smiles`: Reaction SMILES string
-  - `reagents`, `solvents`, `time`, `temperature`, `yield_data`: Structured extraction data
+Follow the OPRD-100 schema structure. See the [validation_reactions.json](../OPRD-100.json) file for complete examples.
 
 ## 🚀 How to Submit
 
