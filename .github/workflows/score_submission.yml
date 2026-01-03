@@ -1,0 +1,121 @@
+name: Score Submission
+
+on:
+  pull_request:
+    paths:
+      - 'data/submissions/**'
+    types: [opened, synchronize]
+
+
+jobs:
+  evaluate:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        with:
+          ref: ${{ github.event.pull_request.head.ref }}
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+      
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+      
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt
+      
+      - name: Extract submitter name
+        id: get_name
+        run: |
+          SUBMISSION_FILE=$(find data/submissions -name "*.json" -type f ! -name "example_submission.json" | head -1)
+          if [ -z "$SUBMISSION_FILE" ]; then
+            echo "No submission file found (excluding example)"
+            exit 1
+          fi
+          SUBMITTER_NAME=$(python -c "import json; print(json.load(open('$SUBMISSION_FILE'))['submitter_name'])")
+          TIMESTAMP=$(date +%Y%m%d_%H%M%S)
+          OUTPUT_DIR="results/${SUBMITTER_NAME}_${TIMESTAMP}"
+          echo "output_dir=$OUTPUT_DIR" >> $GITHUB_OUTPUT
+          echo "submitter_name=$SUBMITTER_NAME" >> $GITHUB_OUTPUT
+          echo "submission_file=$SUBMISSION_FILE" >> $GITHUB_OUTPUT
+      
+      - name: Create output directory
+        run: |
+          mkdir -p ${{ steps.get_name.outputs.output_dir }}
+      
+      - name: Run scoring notebook
+        run: |
+          python scripts/run_scoring.py \
+            --submission-file ${{ steps.get_name.outputs.submission_file }} \
+            --output-dir ${{ steps.get_name.outputs.output_dir }}
+      
+      - name: Extract scores
+        id: extract_scores
+        run: |
+          python scripts/extract_scores.py \
+            --results-dir ${{ steps.get_name.outputs.output_dir }} \
+            --output ${{ steps.get_name.outputs.output_dir }}/scores.json
+          
+          # Read scores for later use
+          SCORES=$(cat ${{ steps.get_name.outputs.output_dir }}/scores.json)
+          echo "scores<<EOF" >> $GITHUB_OUTPUT
+          echo "$SCORES" >> $GITHUB_OUTPUT
+          echo "EOF" >> $GITHUB_OUTPUT
+      
+      - name: Update leaderboard
+        run: |
+          python scripts/update_leaderboard.py \
+            --submitter "${{ steps.get_name.outputs.submitter_name }}" \
+            --scores-file ${{ steps.get_name.outputs.output_dir }}/scores.json \
+            --pr-number ${{ github.event.pull_request.number }}
+      
+      - name: Commit results
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add ${{ steps.get_name.outputs.output_dir }}
+          git add README.md
+          git add leaderboard.json
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Add scoring results for ${{ steps.get_name.outputs.submitter_name }}"
+            git push
+          fi
+      
+      - name: Comment on PR
+        uses: actions/github-script@v6
+        with:
+          script: |
+            const fs = require('fs');
+            const scoresPath = '${{ steps.get_name.outputs.output_dir }}/scores.json';
+            const scores = JSON.parse(fs.readFileSync(scoresPath, 'utf8'));
+            
+            const comment = `## 🎯 Scoring Results
+            
+            Thank you for your submission, **${{ steps.get_name.outputs.submitter_name }}**!
+            
+            ### Results Summary
+            | Metric | Experimental | Table | Scheme | Combined |
+            |--------|-------------|-------|--------|----------|
+            | Mean Similarity | ${scores.exp_mean.toFixed(3)} | ${scores.table_mean.toFixed(3)} | ${scores.scheme_mean.toFixed(3)} | ${scores.combined_mean.toFixed(3)} |
+            | Median Similarity | ${scores.exp_median.toFixed(3)} | ${scores.table_median.toFixed(3)} | ${scores.scheme_median.toFixed(3)} | ${scores.combined_median.toFixed(3)} |
+            
+            📊 Results and plots saved to: \`${{ steps.get_name.outputs.output_dir }}\`
+            
+            Check out the full leaderboard in the [README](../blob/main/README.md#-leaderboard)!
+            `;
+            
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: comment
+            });
