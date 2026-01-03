@@ -1,0 +1,11 @@
+{
+  "submitter_name": "example_submission",
+  "method_description": "Example submission showing the required JSON format",
+  "repository_url": "https://github.com/your/repo",
+  "paper_url": "https://doi.org/your.paper",
+  "contact_email": "your.email@example.com",
+  "num_reactions": 189,
+  "num_experimental": 10,
+  "num_scheme": 25,
+  "num_table": 154
+}

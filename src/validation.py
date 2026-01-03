@@ -6,6 +6,7 @@ from typing import Optional, Tuple
 import json
 import os
 from rdkit import Chem
+from rdkit.Chem import rdChemReactions
 import re
 import pandas as pd
 import numpy as np
