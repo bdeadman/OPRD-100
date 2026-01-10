@@ -10,22 +10,9 @@ from matplotlib.colors import to_rgba
 import matplotlib as mpl
 from matplotlib import font_manager as fm
 
-# If on WSL with Windows fonts:
-for p in [
-    "/mnt/c/Windows/Fonts/arial.ttf",
-    "/mnt/c/Windows/Fonts/arialbd.ttf",
-    "/mnt/c/Windows/Fonts/ariali.ttf",
-    "/mnt/c/Windows/Fonts/arialbi.ttf",
-]:
-    try:
-        fm.fontManager.addfont(p)
-    except Exception:
-        pass
 
 mpl.rcParams.update({
     "text.usetex": False,              # use MathText
-    "font.family": "Arial",
-    "font.sans-serif": ["Arial"],
     "mathtext.fontset": "custom",
     "mathtext.rm": "Arial",
     "mathtext.it": "Arial:italic",
@@ -33,7 +20,6 @@ mpl.rcParams.update({
     "pdf.fonttype": 42,
     "svg.fonttype": "none",
 })
-
 
 
 class Plot:

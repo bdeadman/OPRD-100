@@ -153,7 +153,7 @@ def generate_all_plots(dc, exp_results, scheme_results, table_results, combined_
     print("  - Combined score distributions...")
     plot_score_distributions(combined_results, len(combined_results), 
                             "Combined", output_dir, "CombinedValidationSimilarityScoreDistributions.png",
-                            ymax=200)
+                            )
     
     # Plot 3: Experimental score distributions
     if len(exp_results) > 0:
@@ -161,7 +161,7 @@ def generate_all_plots(dc, exp_results, scheme_results, table_results, combined_
         plot_score_distributions(exp_results, len(exp_results), 
                                 "Experimental", output_dir, 
                                 "ExperimentalValidationSimilarityScoreDistributions.png",
-                                ymax=10)
+                                )
     
     # Plot 4: Table score distributions
     if len(table_results) > 0:
@@ -169,7 +169,7 @@ def generate_all_plots(dc, exp_results, scheme_results, table_results, combined_
         plot_score_distributions(table_results, len(table_results), 
                                 "Table", output_dir, 
                                 "TableValidationSimilarityScoreDistributions.png",
-                                ymax=165)
+                                )
     
     # Plot 5: Scheme score distributions
     if len(scheme_results) > 0:
@@ -177,10 +177,10 @@ def generate_all_plots(dc, exp_results, scheme_results, table_results, combined_
         plot_score_distributions(scheme_results, len(scheme_results), 
                                 "Scheme", output_dir, 
                                 "SchemeValidationSimilarityScoreDistributions.png",
-                                ymax=30)
+                                )
 
 
-def plot_score_distributions(results, num_reactions, category, output_dir, filename, ymax=200):
+def plot_score_distributions(results, num_reactions, category, output_dir, filename,):
     """Plot score distribution histograms for a category of results."""
     
     shared_title_fontdict = {'fontsize': 16, 'fontweight': 'bold'}
@@ -205,35 +205,35 @@ def plot_score_distributions(results, num_reactions, category, output_dir, filen
     # Plot histograms and bar charts
     plot.add_hist(row=0, col=0, data=results['reagent_name_similarity'], bins=20, 
                   title="", x_label="Reagent Name Score", y_label="Frequency", 
-                  alpha=0.7, colour='blue', ymax=ymax)
+                  alpha=0.7, colour='blue', )
     
     plot.add_hist(row=0, col=1, data=results['reagent_amount_similarity'], bins=20, 
                   title="", x_label="Reagent Amount\nScore", y_label="", 
-                  alpha=0.7, colour='blue', ymax=ymax)
+                  alpha=0.7, colour='blue', )
     
     plot.add_bar(row=0, col=2, categories=["Yes", "No"], values=equal_step_count_values, 
                  title="", x_label="Equal reaction step\ncount?", y_label="", 
-                 alpha=0.7, colour='blue', ymax=ymax)
+                 alpha=0.7, colour='blue', )
     
     plot.add_hist(row=0, col=3, data=results['reaction_smiles_similarity'], bins=20, 
                   title="", x_label="Reaction SMILES\nScore", y_label="", 
-                  alpha=0.7, colour='blue', ymax=ymax)
+                  alpha=0.7, colour='blue', )
     
     plot.add_hist(row=1, col=0, data=results['solvent_similarity'], bins=20, 
                   title="", x_label="Solvents Score", y_label="Frequency", 
-                  alpha=0.7, colour='blue', ymax=ymax)
+                  alpha=0.7, colour='blue', )
     
     plot.add_hist(row=1, col=1, data=results['time_similarity'], bins=20, 
                   title="", x_label="Time Score", y_label="", 
-                  alpha=0.7, colour='blue', ymax=ymax)
+                  alpha=0.7, colour='blue', )
     
     plot.add_bar(row=1, col=2, categories=["Yes", "No"], values=equal_temp_count_values, 
                  title="", x_label="Equal (min, max)\ntemperatures?", y_label="", 
-                 alpha=0.7, colour='blue', ymax=ymax)
+                 alpha=0.7, colour='blue', )
     
     plot.add_hist(row=1, col=3, data=results['yield_similarity'], bins=20, 
                   title="", x_label="Yield Data Score", y_label="", 
-                  alpha=0.7, colour='blue', ymax=ymax)
+                  alpha=0.7, colour='blue', )
     
     plot.plot(savefig=True, filepath=os.path.join(output_dir, filename))
 
