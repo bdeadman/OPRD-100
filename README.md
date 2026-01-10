@@ -33,7 +33,8 @@ Submissions are automatically scored against the OPRD-100 validation dataset. Sc
 
 | Rank | Submitter | Combined | Experimental | Table | Scheme | Reactions | Date | Details |
 |------|-----------|----------|--------------|-------|--------|-----------|------|----------|
-| 1 | Test User | 0.882 | 0.817 | 0.892 | 0.847 | 189 | 2026-01-03 | [PR #0](../../pull/0) |
+| 1 | GHodg1 | 1.000 | 1.000 | 1.000 | 1.000 | 3537 | 2026-01-10 | [PR #6](../../pull/6) |
+| 2 | test_workflow_submission | 0.933 | N/A | N/A | 0.933 | 5 | 2026-01-03 | [PR #5](../../pull/5) |
 
 **Metrics explanation:**
 - **Combined**: Average similarity across all reaction types (higher is better, max 1.0)
