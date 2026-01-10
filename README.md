@@ -29,7 +29,7 @@ See detailed instructions in [data/submissions/README.md](data/submissions/READM
 
 ## 🏆 Leaderboard
 
-Submissions are automatically scored against the OPRD-100 validation dataset. Scores represent similarity metrics between extracted and ground-truth data.
+Submissions are automatically scored against the OPRD-100 validation dataset. Scores represent similarity metrics between extracted and ground-truth data. The submission by GHodg1 is a test submission of the full OPRD-100 dataset scored against itself. Reaction location classifications are simplified in the scoring workflow and so are different from those in the manuscript. Only reactions from Scheme/Table/Experimental are considered, so some reactions are missing from the full 3.8K reactions in OPRD-100.
 
 | Rank | Submitter | Combined | Experimental | Table | Scheme | Reactions | Date | Details |
 |------|-----------|----------|--------------|-------|--------|-----------|------|----------|
