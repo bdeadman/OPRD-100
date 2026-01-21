@@ -1,0 +1,1052 @@
+{
+    "water": {
+        "cid": 962,
+        "preferred_name": "water",
+        "iupac": "oxidane",
+        "synonyms": [
+            "water",
+            "7732-18-5",
+            "Distilled water",
+            "Dihydrogen oxide",
+            "Sterile water"
+        ],
+        "smiles": "O",
+        "ranking": "Recommended"
+    },
+    "MeOH": {
+        "cid": 887,
+        "preferred_name": "MeOH",
+        "iupac": "methanol",
+        "synonyms": [
+            "methanol",
+            "methyl alcohol",
+            "67-56-1",
+            "wood alcohol",
+            "Wood naphtha"
+        ],
+        "smiles": "CO",
+        "ranking": "Recommended"
+    },
+    "EtOH": {
+        "cid": 702,
+        "preferred_name": "EtOH",
+        "iupac": "ethanol",
+        "synonyms": [
+            "ethanol",
+            "ethyl alcohol",
+            "alcohol",
+            "64-17-5",
+            "grain alcohol"
+        ],
+        "smiles": "CCO",
+        "ranking": "Recommended"
+    },
+    "i-PrOH": {
+        "cid": 3776,
+        "preferred_name": "i-PrOH",
+        "iupac": "propan-2-ol",
+        "synonyms": [
+            "Isopropyl alcohol",
+            "isopropanol",
+            "2-Propanol",
+            "Propan-2-ol",
+            "67-63-0"
+        ],
+        "smiles": "CC(C)O",
+        "ranking": "Recommended"
+    },
+    "n-BuOH": {
+        "cid": 263,
+        "preferred_name": "n-BuOH",
+        "iupac": "butan-1-ol",
+        "synonyms": [
+            "1-butanol",
+            "Butan-1-ol",
+            "n-butanol",
+            "71-36-3",
+            "Butyl alcohol"
+        ],
+        "smiles": "CCCCO",
+        "ranking": "Recommended"
+    },
+    "t-BuOH": {
+        "cid": 6386,
+        "preferred_name": "t-BuOH",
+        "iupac": "2-methylpropan-2-ol",
+        "synonyms": [
+            "tert-Butanol",
+            "tert-Butyl alcohol",
+            "75-65-0",
+            "2-Methylpropan-2-ol",
+            "2-Methyl-2-propanol"
+        ],
+        "smiles": "CC(C)(C)O",
+        "ranking": "Recommended"
+    },
+    "Benzyl alcohol": {
+        "cid": 244,
+        "preferred_name": "Benzyl alcohol",
+        "iupac": "phenylmethanol",
+        "synonyms": [
+            "benzyl alcohol",
+            "phenylmethanol",
+            "benzenemethanol",
+            "100-51-6",
+            "phenylcarbinol"
+        ],
+        "smiles": "C1=CC=C(C=C1)CO",
+        "ranking": "Problematic"
+    },
+    "Ethylene glycol": {
+        "cid": 174,
+        "preferred_name": "Ethylene glycol",
+        "iupac": "ethane-1,2-diol",
+        "synonyms": [
+            "ETHYLENE GLYCOL",
+            "Ethane-1,2-diol",
+            "107-21-1",
+            "1,2-ethanediol",
+            "glycol"
+        ],
+        "smiles": "C(CO)O",
+        "ranking": "Recommended"
+    },
+    "Acetone": {
+        "cid": 180,
+        "preferred_name": "Acetone",
+        "iupac": "propan-2-one",
+        "synonyms": [
+            "acetone",
+            "2-propanone",
+            "67-64-1",
+            "propanone",
+            "Dimethyl ketone"
+        ],
+        "smiles": "CC(=O)C",
+        "ranking": "Recommended"
+    },
+    "MEK": {
+        "cid": 6569,
+        "preferred_name": "MEK",
+        "iupac": "butan-2-one",
+        "synonyms": [
+            "2-Butanone",
+            "METHYL ETHYL KETONE",
+            "Butan-2-one",
+            "Butanone",
+            "78-93-3"
+        ],
+        "smiles": "CCC(=O)C",
+        "ranking": "Recommended"
+    },
+    "MIBK": {
+        "cid": 7909,
+        "preferred_name": "MIBK",
+        "iupac": "4-methylpentan-2-one",
+        "synonyms": [
+            "4-Methyl-2-pentanone",
+            "METHYL ISOBUTYL KETONE",
+            "4-Methylpentan-2-one",
+            "108-10-1",
+            "Isopropylacetone"
+        ],
+        "smiles": "CC(C)CC(=O)C",
+        "ranking": "Recommended"
+    },
+    "Cyclohexanone": {
+        "cid": 7967,
+        "preferred_name": "Cyclohexanone",
+        "iupac": "cyclohexanone",
+        "synonyms": [
+            "CYCLOHEXANONE",
+            "108-94-1",
+            "Ketohexamethylene",
+            "Pimelic ketone",
+            "Sextone"
+        ],
+        "smiles": "C1CCC(=O)CC1",
+        "ranking": "Problematic"
+    },
+    "Methyl acetate": {
+        "cid": 6584,
+        "preferred_name": "Methyl acetate",
+        "iupac": "methyl acetate",
+        "synonyms": [
+            "METHYL ACETATE",
+            "79-20-9",
+            "Methyl ethanoate",
+            "Devoton",
+            "Tereton"
+        ],
+        "smiles": "CC(=O)OC",
+        "ranking": "Problematic"
+    },
+    "Ethyl acetate": {
+        "cid": 8857,
+        "preferred_name": "EtOAc",
+        "iupac": "ethyl acetate",
+        "synonyms": [
+            "ETHYL ACETATE",
+            "141-78-6",
+            "Ethyl ethanoate",
+            "Acetic acid ethyl ester",
+            "Acetoxyethane"
+        ],
+        "smiles": "CCOC(=O)C",
+        "ranking": "Recommended"
+    },
+    "i-PrOAc": {
+        "cid": 7915,
+        "preferred_name": "i-PrOAc",
+        "iupac": "propan-2-yl acetate",
+        "synonyms": [
+            "ISOPROPYL ACETATE",
+            "108-21-4",
+            "2-Propyl acetate",
+            "propan-2-yl acetate",
+            "2-Acetoxypropane"
+        ],
+        "smiles": "CC(C)OC(=O)C",
+        "ranking": "Recommended"
+    },
+    "n-BuOAc": {
+        "cid": 31272,
+        "preferred_name": "n-BuOAc",
+        "iupac": "butyl acetate",
+        "synonyms": [
+            "Butyl acetate",
+            "123-86-4",
+            "N-BUTYL ACETATE",
+            "Acetic acid, butyl ester",
+            "Butyl ethanoate"
+        ],
+        "smiles": "CCCCOC(=O)C",
+        "ranking": "Recommended"
+    },
+    "Diethyl ether": {
+        "cid": 3283,
+        "preferred_name": "Diethyl ether",
+        "iupac": "ethoxyethane",
+        "synonyms": [
+            "DIETHYL ETHER",
+            "ether",
+            "Ethyl ether",
+            "Ethoxyethane",
+            "60-29-7"
+        ],
+        "smiles": "CCOCC",
+        "ranking": "Highly Hazardous"
+    },
+    "Diisopropyl ether": {
+        "cid": 7914,
+        "preferred_name": "Diisopropyl ether",
+        "iupac": "2-propan-2-yloxypropane",
+        "synonyms": [
+            "Diisopropyl ether",
+            "ISOPROPYL ETHER",
+            "108-20-3",
+            "2-Isopropoxypropane",
+            "Propane, 2,2'-oxybis-"
+        ],
+        "smiles": "CC(C)OC(C)C",
+        "ranking": "Hazardous"
+    },
+    "MTBE": {
+        "cid": 15413,
+        "preferred_name": "MTBE",
+        "iupac": "2-methoxy-2-methylpropane",
+        "synonyms": [
+            "tert-Butyl methyl ether",
+            "Methyl tert-butyl ether",
+            "1634-04-4",
+            "MTBE",
+            "2-Methoxy-2-methylpropane"
+        ],
+        "smiles": "CC(C)(C)OC",
+        "ranking": "Hazardous"
+    },
+    "THF": {
+        "cid": 8028,
+        "preferred_name": "THF",
+        "iupac": "oxolane",
+        "synonyms": [
+            "TETRAHYDROFURAN",
+            "109-99-9",
+            "Oxolane",
+            "Furanidine",
+            "Furan, tetrahydro-"
+        ],
+        "smiles": "C1CCOC1",
+        "ranking": "Problematic"
+    },
+    "2-MeTHF": {
+        "cid": 7301,
+        "preferred_name": "2-MeTHF",
+        "iupac": "2-methyloxolane",
+        "synonyms": [
+            "2-METHYLTETRAHYDROFURAN",
+            "96-47-9",
+            "2-Methyloxolane",
+            "Tetrahydro-2-methylfuran",
+            "Tetrahydrosylvan"
+        ],
+        "smiles": "CC1CCCO1",
+        "ranking": "Problematic"
+    },
+    "1,4-dioxane": {
+        "cid": 31275,
+        "preferred_name": "1,4-dioxane",
+        "iupac": "1,4-dioxane",
+        "synonyms": [
+            "1,4-DIOXANE",
+            "Dioxane",
+            "123-91-1",
+            "p-Dioxane",
+            "Diethylene ether"
+        ],
+        "smiles": "C1COCCO1",
+        "ranking": "Hazardous"
+    },
+    "Anisole": {
+        "cid": 7519,
+        "preferred_name": "Anisole",
+        "iupac": "anisole",
+        "synonyms": [
+            "ANISOLE",
+            "Methoxybenzene",
+            "100-66-3",
+            "Benzene, methoxy-",
+            "Methyl phenyl ether"
+        ],
+        "smiles": "COC1=CC=CC=C1",
+        "ranking": "Recommended"
+    },
+    "Pentane": {
+        "cid": 8003,
+        "preferred_name": "Pentane",
+        "iupac": "pentane",
+        "synonyms": [
+            "PENTANE",
+            "n-Pentane",
+            "109-66-0",
+            "Pentan",
+            "Skellysolve A"
+        ],
+        "smiles": "CCCCC",
+        "ranking": "Hazardous"
+    },
+    "Hexane": {
+        "cid": 8058,
+        "preferred_name": "Hexane",
+        "iupac": "hexane",
+        "synonyms": [
+            "HEXANE",
+            "n-Hexane",
+            "110-54-3",
+            "Esani",
+            "Gettysolve-B"
+        ],
+        "smiles": "CCCCCC",
+        "ranking": "Hazardous"
+    },
+    "Heptane": {
+        "cid": 8900,
+        "preferred_name": "Heptane",
+        "iupac": "heptane",
+        "synonyms": [
+            "HEPTANE",
+            "n-Heptane",
+            "142-82-5",
+            "Heptan",
+            "Heptyl hydride"
+        ],
+        "smiles": "CCCCCCC",
+        "ranking": "Problematic"
+    },
+    "Cyclohexane": {
+        "cid": 8078,
+        "preferred_name": "Cyclohexane",
+        "iupac": "cyclohexane",
+        "synonyms": [
+            "CYCLOHEXANE",
+            "110-82-7",
+            "Hexamethylene",
+            "Hexahydrobenzene",
+            "Hexanaphthene"
+        ],
+        "smiles": "C1CCCCC1",
+        "ranking": "Problematic"
+    },
+    "Methyl cyclohexane": {
+        "cid": 7962,
+        "preferred_name": "Methyl cyclohexane",
+        "iupac": "methylcyclohexane",
+        "synonyms": [
+            "METHYLCYCLOHEXANE",
+            "108-87-2",
+            "Hexahydrotoluene",
+            "Cyclohexane, methyl-",
+            "Cyclohexylmethane"
+        ],
+        "smiles": "CC1CCCCC1",
+        "ranking": "Problematic"
+    },
+    "Benzene": {
+        "cid": 241,
+        "preferred_name": "Benzene",
+        "iupac": "benzene",
+        "synonyms": [
+            "benzene",
+            "benzol",
+            "71-43-2",
+            "Cyclohexatriene",
+            "benzole"
+        ],
+        "smiles": "C1=CC=CC=C1",
+        "ranking": "Highly Hazardous"
+    },
+    "Toluene": {
+        "cid": 1140,
+        "preferred_name": "Toluene",
+        "iupac": "toluene",
+        "synonyms": [
+            "toluene",
+            "methylbenzene",
+            "108-88-3",
+            "toluol",
+            "Phenylmethane"
+        ],
+        "smiles": "CC1=CC=CC=C1",
+        "ranking": "Problematic"
+    },
+    "o-xylene": {
+        "cid": 7237,
+        "preferred_name": "o-xylene",
+        "iupac": "1,2-xylene",
+        "synonyms": [
+            "O-XYLENE",
+            "1,2-Dimethylbenzene",
+            "1,2-Xylene",
+            "95-47-6",
+            "Ortho-Xylene"
+        ],
+        "smiles": "CC1=CC=CC=C1C",
+        "ranking": "Problematic"
+    },
+    "m-xylene": {
+        "cid": 7929,
+        "preferred_name": "m-xylene",
+        "iupac": "1,3-xylene",
+        "synonyms": [
+            "M-XYLENE",
+            "108-38-3",
+            "1,3-Dimethylbenzene",
+            "1,3-Xylene",
+            "meta-Xylene"
+        ],
+        "smiles": "CC1=CC(=CC=C1)C",
+        "ranking": "Problematic"
+    },
+    "p-xylene": {
+        "cid": 7809,
+        "preferred_name": "p-xylene",
+        "iupac": "1,4-xylene",
+        "synonyms": [
+            "P-XYLENE",
+            "1,4-Dimethylbenzene",
+            "106-42-3",
+            "Para-Xylene",
+            "1,4-Xylene"
+        ],
+        "smiles": "CC1=CC=C(C=C1)C",
+        "ranking": "Problematic"
+    },
+    "dichloromethane": {
+        "cid": 6344,
+        "preferred_name": "DCM",
+        "iupac": "dichloromethane",
+        "synonyms": [
+            "DICHLOROMETHANE",
+            "Methylene chloride",
+            "75-09-2",
+            "Methylene dichloride",
+            "Methane, dichloro-"
+        ],
+        "smiles": "C(Cl)Cl",
+        "ranking": "Hazardous"
+    },
+    "Chloroform": {
+        "cid": 6212,
+        "preferred_name": "Chloroform",
+        "iupac": "chloroform",
+        "synonyms": [
+            "CHLOROFORM",
+            "Trichloromethane",
+            "67-66-3",
+            "Trichlormethan",
+            "Formyl trichloride"
+        ],
+        "smiles": "C(Cl)(Cl)Cl",
+        "ranking": "Highly Hazardous"
+    },
+    "CCl4": {
+        "cid": 5943,
+        "preferred_name": "CCl4",
+        "iupac": "tetrachloromethane",
+        "synonyms": [
+            "CARBON TETRACHLORIDE",
+            "Tetrachloromethane",
+            "56-23-5",
+            "Perchloromethane",
+            "Tetrasol"
+        ],
+        "smiles": "C(Cl)(Cl)(Cl)Cl",
+        "ranking": "Highly Hazardous"
+    },
+    "DCE": {
+        "cid": 11,
+        "preferred_name": "DCE",
+        "iupac": "1,2-dichloroethane",
+        "synonyms": [
+            "1,2-dichloroethane",
+            "Ethylene dichloride",
+            "107-06-2",
+            "Ethylene chloride",
+            "Ethane, 1,2-dichloro-"
+        ],
+        "smiles": "C(CCl)Cl",
+        "ranking": "Highly Hazardous"
+    },
+    "Chlorobenzene": {
+        "cid": 7964,
+        "preferred_name": "Chlorobenzene",
+        "iupac": "chlorobenzene",
+        "synonyms": [
+            "CHLOROBENZENE",
+            "108-90-7",
+            "Monochlorobenzene",
+            "Phenyl chloride",
+            "Benzene chloride"
+        ],
+        "smiles": "C1=CC=C(C=C1)Cl",
+        "ranking": "Problematic"
+    },
+    "Acetonitrile": {
+        "cid": 6342,
+        "preferred_name": "MeCN",
+        "iupac": "acetonitrile",
+        "synonyms": [
+            "ACETONITRILE",
+            "75-05-8",
+            "Cyanomethane",
+            "Methyl cyanide",
+            "Ethanenitrile"
+        ],
+        "smiles": "CC#N",
+        "ranking": "Problematic"
+    },
+    "DMF": {
+        "cid": 6228,
+        "preferred_name": "DMF",
+        "iupac": "N,N-dimethylformamide",
+        "synonyms": [
+            "N,N-DIMETHYLFORMAMIDE",
+            "Dimethylformamide",
+            "68-12-2",
+            "Dimethyl formamide",
+            "N-Formyldimethylamine"
+        ],
+        "smiles": "CN(C)C=O",
+        "ranking": "Hazardous"
+    },
+    "DMAc": {
+        "cid": 31374,
+        "preferred_name": "DMAc",
+        "iupac": "N,N-dimethylacetamide",
+        "synonyms": [
+            "N,N-DIMETHYLACETAMIDE",
+            "127-19-5",
+            "Dimethylacetamide",
+            "Acetamide, N,N-dimethyl-",
+            "DMAc"
+        ],
+        "smiles": "CC(=O)N(C)C",
+        "ranking": "Hazardous"
+    },
+    "NMP": {
+        "cid": 13387,
+        "preferred_name": "NMP",
+        "iupac": "1-methylpyrrolidin-2-one",
+        "synonyms": [
+            "1-METHYL-2-PYRROLIDINONE",
+            "872-50-4",
+            "N-Methylpyrrolidone",
+            "N-Methyl-2-pyrrolidone",
+            "N-Methyl-2-pyrrolidinone"
+        ],
+        "smiles": "CN1CCCC1=O",
+        "ranking": "Hazardous"
+    },
+    "DMPU": {
+        "cid": 81646,
+        "preferred_name": "DMPU",
+        "iupac": "1,3-dimethyl-1,3-diazinan-2-one",
+        "synonyms": [
+            "1,3-Dimethyl-3,4,5,6-tetrahydro-2(1H)-pyrimidinone",
+            "N,N'-Dimethyltrimethyleneurea",
+            "2(1H)-Pyrimidinone, tetrahydro-1,3-dimethyl-",
+            "CCRIS 4322",
+            "EINECS 230-625-6"
+        ],
+        "smiles": "CN1CCCN(C1=O)C",
+        "ranking": "Problematic"
+    },
+    "DMSO": {
+        "cid": 679,
+        "preferred_name": "DMSO",
+        "iupac": "methylsulfinylmethane",
+        "synonyms": [
+            "dimethyl sulfoxide",
+            "67-68-5",
+            "DMSO",
+            "Methylsulfinylmethane",
+            "Methyl sulfoxide"
+        ],
+        "smiles": "CS(=O)C",
+        "ranking": "Problematic"
+    },
+    "Sulfolane": {
+        "cid": 31347,
+        "preferred_name": "Sulfolane",
+        "iupac": "thiolane 1,1-dioxide",
+        "synonyms": [
+            "SULFOLANE",
+            "126-33-0",
+            "Tetramethylene sulfone",
+            "Tetrahydrothiophene 1,1-dioxide",
+            "Sulfolan"
+        ],
+        "smiles": "C1CCS(=O)(=O)C1",
+        "ranking": "Hazardous"
+    },
+    "HMPA": {
+        "cid": 12679,
+        "preferred_name": "HMPA",
+        "iupac": "N-[bis(dimethylamino)phosphoryl]-N-methylmethanamine",
+        "synonyms": [
+            "HEXAMETHYLPHOSPHORAMIDE",
+            "680-31-9",
+            "HMPA",
+            "Hexamethylphosphoric triamide",
+            "Hexametapol"
+        ],
+        "smiles": "CN(C)P(=O)(N(C)C)N(C)C",
+        "ranking": "Highly Hazardous"
+    },
+    "Nitromethane": {
+        "cid": 6375,
+        "preferred_name": "Nitromethane",
+        "iupac": "nitromethane",
+        "synonyms": [
+            "NITROMETHANE",
+            "75-52-5",
+            "Methane, nitro-",
+            "Nitrocarbol",
+            "Nitrometan"
+        ],
+        "smiles": "C[N+](=O)[O-]",
+        "ranking": "Highly Hazardous"
+    },
+    "Methoxy-ethanol": {
+        "cid": 3015637,
+        "preferred_name": "Methoxy-ethanol",
+        "iupac": "1-methoxyethanol",
+        "synonyms": [
+            "1-methoxyethanol",
+            "methoxylethanol",
+            "methyoxyethanol",
+            "methoxy ethanol",
+            "methoxy-ethanol"
+        ],
+        "smiles": "CC(O)OC",
+        "ranking": "Hazardous"
+    },
+    "Carbon disulfide": {
+        "cid": 6348,
+        "preferred_name": "Carbon disulfide",
+        "iupac": "methanedithione",
+        "synonyms": [
+            "CARBON DISULFIDE",
+            "Carbon disulphide",
+            "75-15-0",
+            "Carbon bisulfide",
+            "Carbon bisulphide"
+        ],
+        "smiles": "C(=S)=S",
+        "ranking": "Highly Hazardous"
+    },
+    "Formic acid": {
+        "cid": 284,
+        "preferred_name": "Formic acid",
+        "iupac": "formic acid",
+        "synonyms": [
+            "formic acid",
+            "64-18-6",
+            "Methanoic acid",
+            "Formylic acid",
+            "Aminic acid"
+        ],
+        "smiles": "C(=O)O",
+        "ranking": "Problematic"
+    },
+    "Acetic acid": {
+        "cid": 176,
+        "preferred_name": "Acetic acid",
+        "iupac": "acetic acid",
+        "synonyms": [
+            "acetic acid",
+            "64-19-7",
+            "ethanoic acid",
+            "Acetic acid glacial",
+            "Acetic acid, glacial"
+        ],
+        "smiles": "CC(=O)O",
+        "ranking": "Problematic"
+    },
+    "Ac2O": {
+        "cid": 7918,
+        "preferred_name": "Ac2O",
+        "iupac": "acetyl acetate",
+        "synonyms": [
+            "ACETIC ANHYDRIDE",
+            "Acetyl acetate",
+            "108-24-7",
+            "Acetanhydride",
+            "Ethanoic anhydride"
+        ],
+        "smiles": "CC(=O)OC(=O)C",
+        "ranking": "Problematic"
+    },
+    "Pyridine": {
+        "cid": 1049,
+        "preferred_name": "Pyridine",
+        "iupac": "pyridine",
+        "synonyms": [
+            "PYRIDINE",
+            "110-86-1",
+            "Azabenzene",
+            "Azine",
+            "Pyridin"
+        ],
+        "smiles": "C1=CC=NC=C1",
+        "ranking": "Hazardous"
+    },
+    "triethyl amine": {
+        "cid": 8471,
+        "preferred_name": "triethyl amine",
+        "iupac": "N,N-diethylethanamine",
+        "synonyms": [
+            "TRIETHYLAMINE",
+            "121-44-8",
+            "N,N-Diethylethanamine",
+            "(Diethylamino)ethane",
+            "Ethanamine, N,N-diethyl-"
+        ],
+        "smiles": "CCN(CC)CC",
+        "ranking": "Hazardous"
+    },
+    "i-butanol": {
+        "cid": 6560,
+        "preferred_name": "i-butanol",
+        "iupac": "2-methylpropan-1-ol",
+        "synonyms": [
+            "Isobutanol",
+            "2-Methyl-1-propanol",
+            "ISOBUTYL ALCOHOL",
+            "2-Methylpropan-1-ol",
+            "78-83-1"
+        ],
+        "smiles": "CC(C)CO",
+        "ranking": "Recommended"
+    },
+    "i-amyl alcohol": {
+        "cid": 31260,
+        "preferred_name": "i-amyl alcohol",
+        "iupac": "3-methylbutan-1-ol",
+        "synonyms": [
+            "Isoamyl alcohol",
+            "3-Methyl-1-butanol",
+            "Isopentyl alcohol",
+            "123-51-3",
+            "3-Methylbutan-1-ol"
+        ],
+        "smiles": "CC(C)CCO",
+        "ranking": "Recommended"
+    },
+    "1,2-propane diol": {
+        "cid": 1030,
+        "preferred_name": "1,2-propane diol",
+        "iupac": "propane-1,2-diol",
+        "synonyms": [
+            "propylene glycol",
+            "1,2-propanediol",
+            "57-55-6",
+            "propane-1,2-diol",
+            "1,2-Propylene glycol"
+        ],
+        "smiles": "CC(CO)O",
+        "ranking": "Problematic"
+    },
+    "glycerol": {
+        "cid": 753,
+        "preferred_name": "glycerol",
+        "iupac": "propane-1,2,3-triol",
+        "synonyms": [
+            "glycerol",
+            "glycerin",
+            "56-81-5",
+            "Glycerine",
+            "1,2,3-Propanetriol"
+        ],
+        "smiles": "C(C(CO)O)O",
+        "ranking": "Problematic"
+    },
+    "i-butyl acetate": {
+        "cid": 8038,
+        "preferred_name": "i-butyl acetate",
+        "iupac": "2-methylpropyl acetate",
+        "synonyms": [
+            "ISOBUTYL ACETATE",
+            "110-19-0",
+            "2-Methylpropyl acetate",
+            "Isobutyl ethanoate",
+            "Acetic acid, 2-methylpropyl ester"
+        ],
+        "smiles": "CC(C)COC(=O)C",
+        "ranking": "Recommended"
+    },
+    "i-amyl acetate": {
+        "cid": 31276,
+        "preferred_name": "i-amyl acetate",
+        "iupac": "3-methylbutyl acetate",
+        "synonyms": [
+            "ISOAMYL ACETATE",
+            "3-Methylbutyl acetate",
+            "123-92-2",
+            "Isopentyl acetate",
+            "Isopentyl ethanoate"
+        ],
+        "smiles": "CC(C)CCOC(=O)C",
+        "ranking": "Recommended"
+    },
+    "glycol diacetate": {
+        "cid": 8121,
+        "preferred_name": "glycol diacetate",
+        "iupac": "2-acetyloxyethyl acetate",
+        "synonyms": [
+            "ETHYLENE GLYCOL DIACETATE",
+            "111-55-7",
+            "Glycol diacetate",
+            "1,2-Diacetoxyethane",
+            "Ethylene diacetate"
+        ],
+        "smiles": "CC(=O)OCCOC(=O)C",
+        "ranking": "Recommended"
+    },
+    "g-valerolactone": {
+        "cid": 7921,
+        "preferred_name": "g-valerolactone",
+        "iupac": "5-methyloxolan-2-one",
+        "synonyms": [
+            "gamma-Valerolactone",
+            "108-29-2",
+            "4-Pentanolide",
+            "4-Valerolactone",
+            "4-Hydroxypentanoic acid lactone"
+        ],
+        "smiles": "CC1CCC(=O)O1",
+        "ranking": "Problematic"
+    },
+    "diethyl succinate": {
+        "cid": 31249,
+        "preferred_name": "diethyl succinate",
+        "iupac": "diethyl butanedioate",
+        "synonyms": [
+            "DIETHYL SUCCINATE",
+            "123-25-1",
+            "Diethyl butanedioate",
+            "Ethyl succinate",
+            "Butanedioic acid, diethyl ester"
+        ],
+        "smiles": "CCOC(=O)CCC(=O)OCC",
+        "ranking": "Problematic"
+    },
+    "TAME": {
+        "cid": 1550286,
+        "preferred_name": "TAME",
+        "iupac": "methyl (2S)-5-(diaminomethylideneamino)-2-[(4-methylphenyl)sulfonylamino]pentanoate",
+        "synonyms": [
+            "901-47-3",
+            "p-toluenesulfonyl-L-arginine methyl ester",
+            "TOSYLARGININE METHYL ESTER",
+            "L-Arginine, N2-((4-methylphenyl)sulfonyl)-, methyl ester",
+            "alpha-N-p-Tosyl-L-arginine methyl ester"
+        ],
+        "smiles": "CC1=CC=C(C=C1)S(=O)(=O)NC(CCCN=C(N)N)C(=O)OC",
+        "ranking": "Recommended"
+    },
+    "CPME": {
+        "cid": 138539,
+        "preferred_name": "CPME",
+        "iupac": "methoxycyclopentane",
+        "synonyms": [
+            "Cyclopentyl methyl ether",
+            "5614-37-9",
+            "Methoxycyclopentane",
+            "Cyclopentane, methoxy-",
+            "Cyclopentane,methoxy-"
+        ],
+        "smiles": "COC1CCCC1",
+        "ranking": "Problematic"
+    },
+    "ETBE": {
+        "cid": 12512,
+        "preferred_name": "ETBE",
+        "iupac": "2-ethoxy-2-methylpropane",
+        "synonyms": [
+            "tert-Butyl ethyl ether",
+            "637-92-3",
+            "2-Ethoxy-2-methylpropane",
+            "Ethyl tert-butyl ether",
+            "ETBE"
+        ],
+        "smiles": "CCOC(C)(C)C",
+        "ranking": "Problematic"
+    },
+    "Limonene": {
+        "cid": 22311,
+        "preferred_name": "Limonene",
+        "iupac": "1-methyl-4-prop-1-en-2-ylcyclohexene",
+        "synonyms": [
+            "1-methyl-4-prop-1-en-2-ylcyclohexene",
+            "RefChem:1055817",
+            "LIMONENE",
+            "Dipentene",
+            "138-86-3"
+        ],
+        "smiles": "CC1=CCC(CC1)C(=C)C",
+        "ranking": "Problematic"
+    },
+    "p-Cymene": {
+        "cid": 7463,
+        "preferred_name": "p-Cymene",
+        "iupac": "1-methyl-4-propan-2-ylbenzene",
+        "synonyms": [
+            "P-CYMENE",
+            "4-Isopropyltoluene",
+            "99-87-6",
+            "p-Isopropyltoluene",
+            "Dolcymene"
+        ],
+        "smiles": "CC1=CC=C(C=C1)C(C)C",
+        "ranking": "Problematic"
+    },
+    "Dimethyl carbonate": {
+        "cid": 12021,
+        "preferred_name": "Dimethyl carbonate",
+        "iupac": "dimethyl carbonate",
+        "synonyms": [
+            "Dimethyl carbonate",
+            "616-38-6",
+            "Methyl carbonate",
+            "Carbonic acid, dimethyl ester",
+            "Methyl carbonate ((MeO)2CO)"
+        ],
+        "smiles": "COC(=O)OC",
+        "ranking": "Recommended"
+    },
+    "ethylene carbonate": {
+        "cid": 7303,
+        "preferred_name": "ethylene carbonate",
+        "iupac": "1,3-dioxolan-2-one",
+        "synonyms": [
+            "Ethylene carbonate",
+            "1,3-DIOXOLAN-2-ONE",
+            "96-49-1",
+            "Glycol carbonate",
+            "Ethylene glycol carbonate"
+        ],
+        "smiles": "C1COC(=O)O1",
+        "ranking": "Problematic"
+    },
+    "propylene carbonate": {
+        "cid": 7924,
+        "preferred_name": "propylene carbonate",
+        "iupac": "4-methyl-1,3-dioxolan-2-one",
+        "synonyms": [
+            "PROPYLENE CARBONATE",
+            "108-32-7",
+            "4-Methyl-1,3-dioxolan-2-one",
+            "1,2-Propylene carbonate",
+            "1,2-Propanediol cyclic carbonate"
+        ],
+        "smiles": "CC1COC(=O)O1",
+        "ranking": "Problematic"
+    },
+    "cyrene": {
+        "cid": 10975499,
+        "preferred_name": "cyrene",
+        "iupac": "(1S,5R)-6,8-dioxabicyclo[3.2.1]octan-4-one",
+        "synonyms": [
+            "53716-82-8",
+            "(1S,5R)-6,8-dioxabicyclo[3.2.1]octan-4-one",
+            "DTXSID30450332",
+            "EC 807-130-4",
+            "(1S,5R)-6,8-Dioxabicyclo(3.2.1)octan-4-one"
+        ],
+        "smiles": "C1CC(=O)C2OCC1O2",
+        "ranking": "Problematic"
+    },
+    "ethyl lactate": {
+        "cid": 7344,
+        "preferred_name": "ethyl lactate",
+        "iupac": "ethyl 2-hydroxypropanoate",
+        "synonyms": [
+            "ETHYL LACTATE",
+            "97-64-3",
+            "Ethyl 2-hydroxypropanoate",
+            "Actylol",
+            "Solactol"
+        ],
+        "smiles": "CCOC(=O)C(C)O",
+        "ranking": "Problematic"
+    },
+    "lactic acid": {
+        "cid": 612,
+        "preferred_name": "lactic acid",
+        "iupac": "2-hydroxypropanoic acid",
+        "synonyms": [
+            "lactic acid",
+            "2-hydroxypropanoic acid",
+            "DL-Lactic acid",
+            "50-21-5",
+            "2-hydroxypropionic acid"
+        ],
+        "smiles": "CC(C(=O)O)O",
+        "ranking": "Problematic"
+    },
+    "Tetrahydrofurfuryl alcohol": {
+        "cid": 7360,
+        "preferred_name": "Tetrahydrofurfuryl alcohol",
+        "iupac": "oxolan-2-ylmethanol",
+        "synonyms": [
+            "TETRAHYDROFURFURYL ALCOHOL",
+            "97-99-4",
+            "Tetrahydro-2-furanmethanol",
+            "THFA",
+            "2-Furanmethanol, tetrahydro-"
+        ],
+        "smiles": "C1CC(OC1)CO",
+        "ranking": "Hazardous"
+    }
+}

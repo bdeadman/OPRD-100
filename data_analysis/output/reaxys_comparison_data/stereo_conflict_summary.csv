@@ -1,0 +1,5 @@
+classification,unique_dois,unique_bnn_molecules,Num_affected_centres
+Reaxys S vs BNN fused ring,3,10,19
+Reaxys R vs BNN S,2,6,11
+BNN R/S vs Reaxys unspecified,1,3,3
+Reaxys S vs BNN R,1,1,1
