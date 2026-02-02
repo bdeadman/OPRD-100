@@ -3,16 +3,16 @@
 # GitHub will automatically request reviews from these owners
 
 # Default: Repository owners must review all changes
-* @OWNER_USERNAME
+* @GHodg1
 
 # Exception: Anyone can submit to data/submissions/ without owner review
 # (But automated validation will still check the submission)
 data/submissions/* 
 
 # Critical files require owner approval
-/.github/workflows/* @OWNER_USERNAME
-/scripts/* @OWNER_USERNAME
-/src/* @OWNER_USERNAME
-/requirements*.txt @OWNER_USERNAME
-/SECURITY.md @OWNER_USERNAME
-README.md @OWNER_USERNAME
+/.github/workflows/* @GHodg1
+/scripts/* @GHodg1
+/src/* @GHodg1
+/requirements*.txt @GHodg1
+/SECURITY.md @GHodg1
+README.md @GHodg1
