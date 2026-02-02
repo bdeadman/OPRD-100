@@ -6,13 +6,15 @@ on:
       - 'data/submissions/**'
     types: [opened, synchronize]
 
-
 jobs:
   evaluate:
     runs-on: ubuntu-latest
     permissions:
       contents: write
       pull-requests: write
+    
+    # Security: Set timeout to prevent runaway processes
+    timeout-minutes: 30
     
     steps:
       - name: Checkout repository
@@ -31,15 +33,56 @@ jobs:
         run: |
           pip install -r requirements-ci.txt
       
+      - name: Security - Validate submission file path
+        id: validate_path
+        run: |
+          # Only allow JSON files in data/submissions/
+          SUBMISSION_FILE=$(find data/submissions -name "*.json" -type f ! -name "example_submission.json" ! -name "time_test_submission.json" | head -1)
+          
+          if [ -z "$SUBMISSION_FILE" ]; then
+            echo "❌ No valid submission file found"
+            exit 1
+          fi
+          
+          # Verify path is within data/submissions/
+          if [[ ! "$SUBMISSION_FILE" =~ ^data/submissions/[^/]+\.json$ ]]; then
+            echo "❌ Invalid submission path: $SUBMISSION_FILE"
+            echo "Submissions must be directly in data/submissions/ directory"
+            exit 1
+          fi
+          
+          # Check file size (max 10MB)
+          FILE_SIZE=$(stat -c%s "$SUBMISSION_FILE" 2>/dev/null || stat -f%z "$SUBMISSION_FILE")
+          MAX_SIZE=$((10 * 1024 * 1024))
+          if [ "$FILE_SIZE" -gt "$MAX_SIZE" ]; then
+            echo "❌ File too large: $FILE_SIZE bytes (max 10MB)"
+            exit 1
+          fi
+          
+          echo "✅ Path validation passed: $SUBMISSION_FILE"
+          echo "submission_file=$SUBMISSION_FILE" >> $GITHUB_OUTPUT
+      
       - name: Extract submitter name
         id: get_name
         run: |
-          SUBMISSION_FILE=$(find data/submissions -name "*.json" -type f ! -name "example_submission.json" | head -1)
-          if [ -z "$SUBMISSION_FILE" ]; then
-            echo "No submission file found (excluding example)"
+          SUBMISSION_FILE="${{ steps.validate_path.outputs.submission_file }}"
+          
+          # Validate JSON syntax before parsing
+          if ! python -c "import json; json.load(open('$SUBMISSION_FILE'))" 2>/dev/null; then
+            echo "❌ Invalid JSON file"
             exit 1
           fi
+          
           SUBMITTER_NAME=$(python -c "import json; print(json.load(open('$SUBMISSION_FILE'))['submitter_name'])")
+          
+          # Sanitize submitter name (alphanumeric, spaces, hyphens, underscores only)
+          SUBMITTER_NAME=$(echo "$SUBMITTER_NAME" | tr -cd '[:alnum:] _-' | cut -c1-50)
+          
+          if [ -z "$SUBMITTER_NAME" ]; then
+            echo "❌ Invalid submitter_name"
+            exit 1
+          fi
+          
           TIMESTAMP=$(date +%Y%m%d_%H%M%S)
           OUTPUT_DIR="results/${SUBMITTER_NAME}_${TIMESTAMP}"
           echo "output_dir=$OUTPUT_DIR" >> $GITHUB_OUTPUT
@@ -51,10 +94,29 @@ jobs:
           mkdir -p ${{ steps.get_name.outputs.output_dir }}
       
       - name: Run scoring notebook
+        id: run_scoring
         run: |
-          python scripts/run_scoring.py \
+          # Set resource limits
+          ulimit -v 4000000  # 4GB virtual memory limit
+          ulimit -t 1800     # 30 minutes CPU time limit
+          
+          # Run with timeout as additional safety
+          timeout 25m python scripts/run_scoring.py \
             --submission-file ${{ steps.get_name.outputs.submission_file }} \
             --output-dir ${{ steps.get_name.outputs.output_dir }}
+        continue-on-error: true
+      
+      - name: Check scoring success
+        run: |
+          if [ ${{ steps.run_scoring.outcome }} != 'success' ]; then
+            echo "❌ Scoring failed or was terminated"
+            echo "This may be due to:"
+            echo "  - Security validation failure"
+            echo "  - Invalid submission format"
+            echo "  - Resource limits exceeded"
+            echo "  - Processing timeout"
+            exit 1
+          fi
       
       - name: Extract scores
         id: extract_scores

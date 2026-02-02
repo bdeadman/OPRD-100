@@ -12,6 +12,7 @@ import pandas as pd
 import numpy as np
 from validation import DataComparer
 from plotting import Plot
+from security import validate_submission
 
 
 def run_scoring(submission_file, output_dir):
@@ -20,10 +21,18 @@ def run_scoring(submission_file, output_dir):
     print(f"Loading submission from: {submission_file}")
     print(f"Output directory: {output_dir}")
     
-    # Load submission
-    with open(submission_file, 'r') as f:
-        submission = json.load(f)
+    # SECURITY: Validate submission file before processing
+    print("Validating submission for security threats...")
+    is_valid, error_msg, submission = validate_submission(submission_file)
     
+    if not is_valid:
+        print(f"❌ SECURITY VALIDATION FAILED: {error_msg}")
+        print("Submission rejected due to security concerns.")
+        sys.exit(1)
+    
+    print("✅ Security validation passed")
+    
+    # Load submission (already validated and loaded)
     submitter_name = submission.get('submitter_name', 'anonymous')
     method_description = submission.get('method_description', 'N/A')
     
