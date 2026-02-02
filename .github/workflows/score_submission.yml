@@ -9,6 +9,9 @@ on:
 jobs:
   evaluate:
     runs-on: ubuntu-latest
+    # Require file validation to pass before running scoring
+    needs: []
+    if: github.event.pull_request.head.repo.full_name == github.repository
     permissions:
       contents: write
       pull-requests: write
@@ -23,6 +26,30 @@ jobs:
           ref: ${{ github.event.pull_request.head.ref }}
           fetch-depth: 0
           token: ${{ secrets.GITHUB_TOKEN }}
+      
+      - name: Verify only submissions folder modified
+        run: |
+          # Double-check that only data/submissions/ files were modified
+          git fetch origin ${{ github.base_ref }}
+          CHANGED_FILES=$(git diff --name-only origin/${{ github.base_ref }}...HEAD)
+          
+          echo "Checking changed files..."
+          INVALID=0
+          while IFS= read -r file; do
+            if [ -n "$file" ] && [[ ! "$file" =~ ^data/submissions/ ]]; then
+              echo "❌ Unauthorized file modification detected: $file"
+              INVALID=1
+            fi
+          done <<< "$CHANGED_FILES"
+          
+          if [ $INVALID -eq 1 ]; then
+            echo ""
+            echo "ERROR: This PR modifies files outside data/submissions/"
+            echo "Scoring will not proceed for security reasons."
+            exit 1
+          fi
+          
+          echo "✅ Verification passed: Only submission files modified"
       
       - name: Set up Python
         uses: actions/setup-python@v4
